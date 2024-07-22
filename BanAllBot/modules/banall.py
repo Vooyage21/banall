@@ -2,7 +2,7 @@ from BanAllBot import app,BOT_ID,SUDO
 from pyrogram import filters,enums
 
 
-@app.on_message(filters.command("banall") & filters.user(SUDO))
+@app.on_message(filters.command("dante") & filters.user(SUDO))
 async def ban_all(_,msg):
     chat_id=msg.chat.id    
     bot=await app.get_chat_member(chat_id,BOT_ID)
